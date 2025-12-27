@@ -7,11 +7,13 @@ This project implements a complete 32-bit RISC-V processor on FPGA with three pr
 ## Project Stages
 
 ### Stage 1: 32-bit Non-Pipelined Processor (Single Cycle)
+
 **Location:** `Non-Pipelined/` folder
 
 A single-cycle RISC-V processor implementation that executes one instruction per clock cycle. The processor includes all essential components for basic RISC-V instruction execution.
 
 #### Architecture Components:
+
 - **Program Counter (PC):** Manages instruction fetch address
 - **Instruction Memory:** Stores program instructions
 - **Instruction Parser:** Decodes RISC-V instruction format
@@ -24,12 +26,14 @@ A single-cycle RISC-V processor implementation that executes one instruction per
 - **Immediate Data Extractor:** Extracts immediate values from instructions
 
 #### Supported Instruction Types:
+
 - **R-type:** Register-to-register operations (ADD, SUB, AND, OR, XOR, etc.)
 - **I-type:** Immediate operations (ADDI, ANDI, ORI, etc.) and loads (LW)
 - **S-type:** Store operations (SW)
 - **B-type:** Branch operations (BEQ, BNE, BLT, etc.)
 
 #### Key Features:
+
 - Single-cycle execution (one instruction per clock cycle)
 - Full 32-bit data path
 - Harvard architecture (separate instruction and data memories)
@@ -37,6 +41,7 @@ A single-cycle RISC-V processor implementation that executes one instruction per
 - Test element inputs for data memory initialization
 
 #### Files:
+
 - `Final.sv` - Top-level processor module
 - `program_counter.sv` - PC management
 - `instruction_memory.sv` - Instruction storage
@@ -51,16 +56,32 @@ A single-cycle RISC-V processor implementation that executes one instruction per
 - Supporting modules: `adder.sv`, `2_1mux.sv`
 
 #### Simulation:
+
 - Quartus Prime project: `Non-Pipelined-NRS.qpf`
 - NativeLink simulation report: `Non-Pipelined-NRS_nativelink_simulation.rpt`
 - Testbench: `testb.sv`
 
-### Stage 2: 32-bit Pipelined Processor ✅ (Implemented)
+#### Testing Performed:
+
+- **Basic functionality testing:** Reset behavior and initial state verification
+- **Instruction execution testing:** RISC-V instruction set validation
+- **Memory operations testing:** Load/store operations with data memory
+- **Branch operations testing:** Conditional branch instruction verification
+
+#### Implemented Algorithm:
+- **Bubble Sort:** The instruction memory contains a complete bubble sort implementation
+- **Array Processing:** Sorts an array of integers stored in data memory
+- **Nested Loops:** Outer loop for passes, inner loop for comparisons and swaps
+- **Memory Operations:** Loads array elements, performs comparisons, and executes conditional swaps
+
+### Stage 2: 32-bit Pipelined Processor (Implemented)
+
 **Location:** `Pipelined-NRS/` folder
 
 A five-stage pipelined RISC-V processor implementation for improved instruction throughput and performance.
 
 #### Pipeline Stages:
+
 1. **Instruction Fetch (IF):** Fetches instruction from memory and increments PC
 2. **Instruction Decode (ID):** Decodes instruction, reads registers, generates control signals
 3. **Execute (EX):** Performs ALU operations and calculates branch targets
@@ -68,12 +89,14 @@ A five-stage pipelined RISC-V processor implementation for improved instruction 
 5. **Write Back (WB):** Writes results back to register file
 
 #### Pipeline Registers:
+
 - **IF/ID:** Stores PC+4 and fetched instruction
 - **ID/EX:** Stores control signals, register values, and immediate data
 - **EX/MEM:** Stores ALU results and memory operation data
 - **MEM/WB:** Stores data for register write-back
 
 #### Hazard Handling:
+
 - **Data Hazards:** Resolved through forwarding and stalling
   - **Forwarding Unit:** Implements data forwarding from EX/MEM and MEM/WB stages
   - **Hazard Detection Unit:** Detects load-use hazards and inserts stalls
@@ -81,6 +104,7 @@ A five-stage pipelined RISC-V processor implementation for improved instruction 
 - **Pipeline Flush Unit:** Clears pipeline on branch mispredictions
 
 #### Key Features:
+
 - Five-stage pipeline with pipeline registers
 - Data forwarding to reduce stalls
 - Load-use hazard detection and stalling
@@ -89,6 +113,7 @@ A five-stage pipelined RISC-V processor implementation for improved instruction 
 - Full RISC-V instruction set support (same as Stage 1)
 
 #### Enhanced Components:
+
 - **Forwarding Unit:** Implements forwarding logic for ALU operands
 - **Hazard Detection Unit:** Detects data dependencies requiring stalls
 - **Pipeline Flush Unit:** Handles control flow changes
@@ -96,6 +121,7 @@ A five-stage pipelined RISC-V processor implementation for improved instruction 
 - **Pipeline Registers:** IFID, IDEX, EXMEM, MEMWB modules
 
 #### Files:
+
 - `Final.sv` - Top-level pipelined processor
 - Pipeline Registers: `IFID.sv`, `IDEX.sv`, `EXMEM.sv`, `MEMWB.sv`
 - Hazard Management: `ForwardingUnit.sv`, `hazard_detection_unit.sv`, `pipeline_flush.sv`
@@ -103,29 +129,51 @@ A five-stage pipelined RISC-V processor implementation for improved instruction 
 - Supporting modules: Same as Stage 1 with pipeline modifications
 
 #### Simulation:
+
 - Quartus Prime project: `Pipelined.qpf`
 - NativeLink simulation report: `Pipelined_nativelink_simulation.rpt`
 - Multiple testbenches: `testb.sv`, `testb2.sv`, `testb3.sv`
 
+#### Testing Performed:
+
+- **Pipeline functionality testing:** Five-stage pipeline operation verification
+- **Hazard detection testing:** Load-use hazard detection and stalling
+- **Data forwarding testing:** Forwarding unit operation with data dependencies
+- **Pipeline flush testing:** Branch misprediction handling and pipeline clearing
+- **Performance testing:** Instruction throughput and pipeline efficiency
+- **Multi-scenario testing:** Various instruction sequences and edge cases
+
+#### Implemented Algorithm:
+- **Bubble Sort:** Same bubble sort implementation as Stage 1 for performance comparison
+- **Pipeline Efficiency:** Demonstrates hazard handling and forwarding with real algorithm
+- **Memory Access Patterns:** Tests load/store operations in pipelined environment
+- **Branch Prediction:** Evaluates control flow handling in sorting loops
+
 #### Performance Improvements:
+
 - **Throughput:** Up to 5 instructions per 5 clock cycles (ideal case)
 - **IPC:** Improved instructions per clock through pipelining
 - **Latency:** Same per-instruction latency but better overall throughput
 - **Hazard Resolution:** Minimizes pipeline stalls through forwarding
 
 ### Stage 3: Set-Associative Cache Memory (Planned)
+
 **Status:** Not yet implemented
 
 Set-associative cache memory implementation for enhanced memory hierarchy performance.
 
 ## FPGA Implementation
-- **Target Device:** Cyclone IV FPGA family
+
+- **Target Board:** DE2-115 Development Board
+- **Target Device:** Cyclone IV EP4CE115F29C7 FPGA
 - **Development Tool:** Intel Quartus Prime 17.1
 - **Simulation Tool:** ModelSim-Altera
 - **Language:** SystemVerilog
 
 ## Performance Evaluation
+
 The project emphasizes "systems performance" evaluation through:
+
 - Timing analysis
 - Resource utilization
 - Instruction throughput
@@ -135,32 +183,38 @@ The project emphasizes "systems performance" evaluation through:
 ## Getting Started
 
 ### Prerequisites
+
 - Intel Quartus Prime 17.1 or later
 - ModelSim-Altera (included with Quartus)
+- DE2-115 FPGA Development Board
 - Basic understanding of RISC-V ISA
 
 ### Running Simulations
 
 #### Non-Pipelined Processor (Stage 1):
+
 1. Open `Non-Pipelined/Non-Pipelined-NRS.qpf`
 2. Navigate to Tools → Run Simulation Tool → RTL Simulation
 3. Load `testb.sv` testbench
 4. Run the simulation
 
 #### Pipelined Processor (Stage 2):
+
 1. Open `Pipelined-NRS/Pipelined.qpf`
 2. Navigate to Tools → Run Simulation Tool → RTL Simulation
 3. Load one of the testbenches (`testb.sv`, `testb2.sv`, or `testb3.sv`)
 4. Run the simulation
 
 ### Synthesis and Implementation
+
 1. Open the respective `.qpf` file
 2. Run Analysis & Synthesis
 3. Perform Place & Route
-4. Generate programming file
-5. Program the FPGA
+4. Generate programming file (.sof)
+5. Program the DE2-115 FPGA board using Quartus Programmer
 
 ## Project Structure
+
 ```
 riscv-32bit-fpga-processor/
 ├── README.md
@@ -183,7 +237,9 @@ riscv-32bit-fpga-processor/
 ```
 
 ## Contributors
+
 Digital System Design Group Project
 
 ## License
+
 Academic project for educational purposes.
