@@ -1,0 +1,48 @@
+module testb();
+  reg clk, reset;
+  wire [31:0] element1;
+  wire [31:0] element2;
+  wire [31:0] element3;
+  wire [31:0] element4;
+  wire [31:0] element5;
+  wire [31:0] element6;
+  wire [31:0] element7;
+  wire [31:0] element8;
+  
+  Final r1
+  (
+    .clk(clk),
+    .reset(reset),
+    .element1(element1),
+    .element2(element2),
+    .element3(element3),
+    .element4(element4),
+    .element5(element5),
+    .element6(element6),
+    .element7(element7),
+    .element8(element8)
+  );
+  
+  initial 
+    begin
+      
+      $dumpfile("dump.vcd");
+      $dumpvars(1, testb);
+		
+      clk = 1'b0;
+      reset = 1'b1;
+      
+      #7 
+      reset = 1'b0;
+      #7000
+      $finish;
+      
+    end
+  
+  always
+    begin
+      #5
+      clk = ~clk;
+    end
+endmodule
+

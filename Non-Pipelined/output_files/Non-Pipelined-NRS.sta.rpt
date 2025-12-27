@@ -1,0 +1,640 @@
+TimeQuest Timing Analyzer report for Non-Pipelined-NRS
+Fri Jan 03 22:43:43 2025
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Metastability Summary
+ 13. Slow 1200mV 0C Model Fmax Summary
+ 14. Slow 1200mV 0C Model Setup Summary
+ 15. Slow 1200mV 0C Model Hold Summary
+ 16. Slow 1200mV 0C Model Recovery Summary
+ 17. Slow 1200mV 0C Model Removal Summary
+ 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1200mV 0C Model Metastability Summary
+ 20. Fast 1200mV 0C Model Setup Summary
+ 21. Fast 1200mV 0C Model Hold Summary
+ 22. Fast 1200mV 0C Model Recovery Summary
+ 23. Fast 1200mV 0C Model Removal Summary
+ 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV 0C Model Metastability Summary
+ 26. Multicorner Timing Analysis Summary
+ 27. Board Trace Model Assignments
+ 28. Input Transition Times
+ 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 32. Clock Transfers
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths Summary
+ 36. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; Non-Pipelined-NRS                                   ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.2%      ;
++----------------------------+-------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
+-----------------------------------------------------
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
+-----------------------------------------------------
+No paths to report.
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element1[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element2[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element3[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element4[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element5[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element6[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element7[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[8]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[9]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[10]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[11]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[12]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[13]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[14]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[15]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[16]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[17]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[18]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[19]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[20]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[21]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[22]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[23]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[24]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[25]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[26]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[27]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[28]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[29]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[30]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; element8[31]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Jan 03 22:43:41 2025
+Info: Command: quartus_sta Non-Pipelined-NRS -c Non-Pipelined-NRS
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Non-Pipelined-NRS.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Fast 1200mV 0C Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Fri Jan 03 22:43:43 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
