@@ -1,0 +1,825 @@
+Analysis & Synthesis report for Pipelined
+Fri Jan 03 22:52:02 2025
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "data_memory:datamem"
+ 10. Port Connectivity Checks: "EXMEM:i3"
+ 11. Port Connectivity Checks: "adder:adder2"
+ 12. Port Connectivity Checks: "registerFile:regfile"
+ 13. Port Connectivity Checks: "Parser:ip"
+ 14. Port Connectivity Checks: "adder:adder1"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jan 03 22:52:01 2025       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Pipelined                                   ;
+; Top-level Entity Name              ; Final                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 260                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Final              ; Pipelined          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; ThreebyOneMux.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv         ;         ;
+; reg_file.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/reg_file.sv              ;         ;
+; program_counter.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/program_counter.sv       ;         ;
+; pipeline_flush.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/pipeline_flush.sv        ;         ;
+; MEMWB.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/MEMWB.sv                 ;         ;
+; instruction_parser.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_parser.sv    ;         ;
+; instruction_memory.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_memory.sv    ;         ;
+; imm_data_extractor.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv    ;         ;
+; IFID.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IFID.sv                  ;         ;
+; IDEX.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IDEX.sv                  ;         ;
+; hazard_detection_unit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/hazard_detection_unit.sv ;         ;
+; ForwardingUnit.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ForwardingUnit.sv        ;         ;
+; EXMEM.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/EXMEM.sv                 ;         ;
+; data_memory.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv           ;         ;
+; control_unit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/control_unit.sv          ;         ;
+; branching_unit.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv        ;         ;
+; alu_control.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv           ;         ;
+; alu_64bit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv             ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/adder.sv                 ;         ;
+; 2_1mux.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/2_1mux.sv                ;         ;
+; Final.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv                 ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 260   ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 260   ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |Final                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 260  ; 0            ; |Final              ; Final       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_memory:datamem"                                                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; element1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element5 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element6 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element7 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element8 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EXMEM:i3"                                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "adder:adder2" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; q[0] ; Input ; Info     ; Stuck at GND   ;
++------+-------+----------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:regfile"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; r8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r19  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r20  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r21  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r22  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Parser:ip"                                                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; funct3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; funct7 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "adder:adder1"   ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; q[31..3] ; Input ; Info     ; Stuck at GND ;
+; q[1..0]  ; Input ; Info     ; Stuck at GND ;
+; q[2]     ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 260                             ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Jan 03 22:51:48 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pipelined -c Pipelined
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file threebyonemux.sv
+    Info (12023): Found entity 1: ThreebyOneMux File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file reg_file.sv
+    Info (12023): Found entity 1: registerFile File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/reg_file.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file program_counter.sv
+    Info (12023): Found entity 1: program_counter File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/program_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline_flush.sv
+    Info (12023): Found entity 1: pipeline_flush File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/pipeline_flush.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memwb.sv
+    Info (12023): Found entity 1: MEMWB File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/MEMWB.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_parser.sv
+    Info (12023): Found entity 1: Parser File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_parser.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.sv
+    Info (12023): Found entity 1: instruction_memory File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_memory.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file imm_data_extractor.sv
+    Info (12023): Found entity 1: data_extractor File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ifid.sv
+    Info (12023): Found entity 1: IFID File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IFID.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file idex.sv
+    Info (12023): Found entity 1: IDEX File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IDEX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_detection_unit.sv
+    Info (12023): Found entity 1: hazard_detection_unit File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/hazard_detection_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file forwardingunit.sv
+    Info (12023): Found entity 1: ForwardingUnit File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ForwardingUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file exmem.sv
+    Info (12023): Found entity 1: EXMEM File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/EXMEM.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file data_memory.sv
+    Info (12023): Found entity 1: data_memory File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.sv
+    Info (12023): Found entity 1: CU File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/control_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file branching_unit.sv
+    Info (12023): Found entity 1: branching_unit File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control.sv
+    Info (12023): Found entity 1: alu_control File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_64bit.sv
+    Info (12023): Found entity 1: Alu64 File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
+    Info (12023): Found entity 1: adder File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 2_1mux.sv
+    Info (12023): Found entity 1: twox1Mux File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/2_1mux.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file final.sv
+    Info (12023): Found entity 1: Final File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file testb.sv
+    Info (12023): Found entity 1: testb File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testb2.sv
+    Info (12023): Found entity 1: Final_tb File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb2.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file testb3.sv
+    Info (12023): Found entity 1: testb3 File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb3.sv Line: 3
+Info (12127): Elaborating entity "Final" for the top level hierarchy
+Info (12128): Elaborating entity "pipeline_flush" for hierarchy "pipeline_flush:p_flush" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 119
+Info (12128): Elaborating entity "hazard_detection_unit" for hierarchy "hazard_detection_unit:hu" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 128
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 138
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:im" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 144
+Info (12128): Elaborating entity "adder" for hierarchy "adder:adder1" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 152
+Info (12128): Elaborating entity "IFID" for hierarchy "IFID:i1" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 164
+Info (12128): Elaborating entity "Parser" for hierarchy "Parser:ip" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 175
+Info (12128): Elaborating entity "CU" for hierarchy "CU:cu" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 188
+Info (12128): Elaborating entity "data_extractor" for hierarchy "data_extractor:immextr" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 194
+Warning (10270): Verilog HDL Case Statement warning at imm_data_extractor.sv(10): incomplete case statement has no default case item File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at imm_data_extractor.sv(10): inferring latch(es) for variable "imm_data", which holds its previous value in one or more paths through the always construct File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[0]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[1]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[2]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[3]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[4]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[5]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[6]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[7]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[8]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[9]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[10]" at imm_data_extractor.sv(10) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv Line: 10
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:regfile" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 213
+Info (12128): Elaborating entity "IDEX" for hierarchy "IDEX:i2" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 231
+Info (12128): Elaborating entity "ThreebyOneMux" for hierarchy "ThreebyOneMux:m1" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 243
+Warning (10270): Verilog HDL Case Statement warning at ThreebyOneMux.sv(12): incomplete case statement has no default case item File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Warning (10240): Verilog HDL Always Construct warning at ThreebyOneMux.sv(12): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[0]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[1]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[2]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[3]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[4]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[5]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[6]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[7]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[8]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[9]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[10]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[11]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[12]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[13]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[14]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[15]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[16]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[17]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[18]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[19]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[20]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[21]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[22]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[23]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[24]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[25]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[26]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[27]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[28]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[29]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[30]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[31]" at ThreebyOneMux.sv(12) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv Line: 12
+Info (12128): Elaborating entity "twox1Mux" for hierarchy "twox1Mux:mux1" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 253
+Info (12128): Elaborating entity "Alu64" for hierarchy "Alu64:alu" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 262
+Warning (10270): Verilog HDL Case Statement warning at alu_64bit.sv(11): incomplete case statement has no default case item File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Warning (10240): Verilog HDL Always Construct warning at alu_64bit.sv(11): inferring latch(es) for variable "Result", which holds its previous value in one or more paths through the always construct File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[0]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[1]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[2]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[3]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[4]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[5]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[6]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[7]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[8]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[9]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[10]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[11]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[12]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[13]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[14]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[15]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[16]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[17]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[18]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[19]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[20]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[21]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[22]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[23]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[24]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[25]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[26]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[27]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[28]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[29]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[30]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (10041): Inferred latch for "Result[31]" at alu_64bit.sv(11) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv Line: 11
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:ac" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 269
+Warning (10240): Verilog HDL Always Construct warning at alu_control.sv(8): inferring latch(es) for variable "operation", which holds its previous value in one or more paths through the always construct File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv Line: 8
+Info (10041): Inferred latch for "operation[0]" at alu_control.sv(16) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv Line: 16
+Info (10041): Inferred latch for "operation[1]" at alu_control.sv(16) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv Line: 16
+Info (10041): Inferred latch for "operation[2]" at alu_control.sv(16) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv Line: 16
+Info (10041): Inferred latch for "operation[3]" at alu_control.sv(16) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv Line: 16
+Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:i3" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 280
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:datamem" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 298
+Warning (10240): Verilog HDL Always Construct warning at data_memory.sv(47): inferring latch(es) for variable "read_data", which holds its previous value in one or more paths through the always construct File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[0]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[1]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[2]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[3]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[4]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[5]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[6]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[7]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[8]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[9]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[10]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[11]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[12]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[13]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[14]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[15]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[16]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[17]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[18]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[19]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[20]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[21]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[22]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[23]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[24]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[25]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[26]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[27]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[28]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[29]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[30]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[31]" at data_memory.sv(47) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv Line: 47
+Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:i4" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 313
+Info (12128): Elaborating entity "ForwardingUnit" for hierarchy "ForwardingUnit:f1" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 327
+Info (12128): Elaborating entity "branching_unit" for hierarchy "branching_unit:branc" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 333
+Warning (10270): Verilog HDL Case Statement warning at branching_unit.sv(16): incomplete case statement has no default case item File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv Line: 16
+Warning (10240): Verilog HDL Always Construct warning at branching_unit.sv(16): inferring latch(es) for variable "addermuxselect", which holds its previous value in one or more paths through the always construct File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv Line: 16
+Info (10041): Inferred latch for "addermuxselect" at branching_unit.sv(16) File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv Line: 16
+Info (144001): Generated suppressed messages file C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/output_files/Pipelined.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 260 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 4
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element1[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element2[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element3[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element4[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element5[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element6[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element7[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[0]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[1]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[2]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[3]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[4]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[5]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[6]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[7]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[8]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[9]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[10]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[11]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[12]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[13]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[14]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[15]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[16]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[17]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[18]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[19]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[20]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[21]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[22]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[23]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[24]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[25]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[26]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[27]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[28]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[29]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[30]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "element8[31]" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 13
+    Warning (15610): No output dependent on input pin "stall" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 14
+    Warning (15610): No output dependent on input pin "flush" File: C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv Line: 14
+Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 260 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 272 warnings
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Fri Jan 03 22:52:02 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/output_files/Pipelined.map.smsg.
+
+

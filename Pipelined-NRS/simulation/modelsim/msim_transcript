@@ -1,0 +1,273 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Pipelined_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:01 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ThreebyOneMux.sv 
+# -- Compiling module ThreebyOneMux
+# 
+# Top level modules:
+# 	ThreebyOneMux
+# End time: 22:53:01 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/reg_file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:01 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/reg_file.sv 
+# -- Compiling module registerFile
+# 
+# Top level modules:
+# 	registerFile
+# End time: 22:53:01 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/program_counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:02 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/program_counter.sv 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 22:53:02 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/pipeline_flush.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:02 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/pipeline_flush.sv 
+# -- Compiling module pipeline_flush
+# 
+# Top level modules:
+# 	pipeline_flush
+# End time: 22:53:02 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/MEMWB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:02 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/MEMWB.sv 
+# -- Compiling module MEMWB
+# 
+# Top level modules:
+# 	MEMWB
+# End time: 22:53:02 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_parser.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:03 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_parser.sv 
+# -- Compiling module Parser
+# 
+# Top level modules:
+# 	Parser
+# End time: 22:53:03 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:03 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/instruction_memory.sv 
+# -- Compiling module instruction_memory
+# 
+# Top level modules:
+# 	instruction_memory
+# End time: 22:53:03 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:04 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/imm_data_extractor.sv 
+# -- Compiling module data_extractor
+# 
+# Top level modules:
+# 	data_extractor
+# End time: 22:53:04 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IFID.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:04 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IFID.sv 
+# -- Compiling module IFID
+# 
+# Top level modules:
+# 	IFID
+# End time: 22:53:04 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IDEX.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:04 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/IDEX.sv 
+# -- Compiling module IDEX
+# 
+# Top level modules:
+# 	IDEX
+# End time: 22:53:04 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/hazard_detection_unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:05 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/hazard_detection_unit.sv 
+# -- Compiling module hazard_detection_unit
+# 
+# Top level modules:
+# 	hazard_detection_unit
+# End time: 22:53:05 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ForwardingUnit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:05 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/ForwardingUnit.sv 
+# -- Compiling module ForwardingUnit
+# 
+# Top level modules:
+# 	ForwardingUnit
+# End time: 22:53:05 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/EXMEM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:06 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/EXMEM.sv 
+# -- Compiling module EXMEM
+# 
+# Top level modules:
+# 	EXMEM
+# End time: 22:53:06 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:06 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/data_memory.sv 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 22:53:06 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/control_unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:06 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/control_unit.sv 
+# -- Compiling module CU
+# 
+# Top level modules:
+# 	CU
+# End time: 22:53:06 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:07 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/branching_unit.sv 
+# -- Compiling module branching_unit
+# 
+# Top level modules:
+# 	branching_unit
+# End time: 22:53:07 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:07 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_control.sv 
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 22:53:07 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:08 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/alu_64bit.sv 
+# -- Compiling module Alu64
+# 
+# Top level modules:
+# 	Alu64
+# End time: 22:53:08 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:08 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 22:53:08 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/2_1mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:08 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/2_1mux.sv 
+# -- Compiling module twox1Mux
+# 
+# Top level modules:
+# 	twox1Mux
+# End time: 22:53:08 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:09 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/Final.sv 
+# -- Compiling module Final
+# 
+# Top level modules:
+# 	Final
+# End time: 22:53:09 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4 {C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:53:09 on Jan 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4" C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb.sv 
+# -- Compiling module testb
+# 
+# Top level modules:
+# 	testb
+# End time: 22:53:09 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testb 
+# Start time: 22:53:10 on Jan 03,2025
+# Loading sv_std.std
+# Loading work.testb
+# Loading work.Final
+# Loading work.pipeline_flush
+# Loading work.hazard_detection_unit
+# Loading work.program_counter
+# Loading work.instruction_memory
+# Loading work.adder
+# Loading work.IFID
+# Loading work.Parser
+# Loading work.CU
+# Loading work.data_extractor
+# Loading work.registerFile
+# Loading work.IDEX
+# Loading work.ThreebyOneMux
+# Loading work.twox1Mux
+# Loading work.Alu64
+# Loading work.alu_control
+# Loading work.EXMEM
+# Loading work.data_memory
+# Loading work.MEMWB
+# Loading work.ForwardingUnit
+# Loading work.branching_unit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb.sv(42)
+#    Time: 7007 ps  Iteration: 0  Instance: /testb
+# 1
+# Break in Module testb at C:/Users/UserUser.DESKTOP-VSEAMRA/Videos/DSD_Group_Final_Backup/Pipelined-NRS/4/testb.sv line 42
+# End time: 22:53:35 on Jan 03,2025, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0
